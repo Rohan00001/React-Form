@@ -1,8 +1,17 @@
-# React + Vite
+# React Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+React Form is a simple form that allows users to input their name, email, phone number, password, country Name, city, Pan Card and Aadhar Card. It also has a submit button that will only allow to submit the form if all the fields are filled and valid.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+
+1. Clone the repository
+2. Run `bun install` to install all the dependencies
+3. Run `bun run dev` to start the development server
+
+## Usage
+
+1. Fill in all the fields
+2. Click on the submit button if the button is disabled, it means that there are some fields that are not valid
+3. If all the fields are valid, the form will be submitted.
