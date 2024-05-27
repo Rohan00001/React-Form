@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import Form from './components/Form';
+import { Outlet } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
 	return (
 		<>
-			<div className='container'>
-				<h1>React Form</h1>
-				<Form />
-			</div>
+			<Header />
+			<Outlet />
+			<Footer />
 		</>
 	);
 }

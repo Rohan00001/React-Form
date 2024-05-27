@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import countries from '../constants/country';
 import sortByName from '../utils/sortByName';
+import { useNavigate } from 'react-router-dom';
 
-function Form() {
+function FormComponent() {
 	const [country, setCountry] = useState(countries[0]);
 	const [cities, setCities] = useState(country.cities);
 	const [showPassword, setShowPassword] = useState(false);
@@ -22,6 +23,8 @@ function Form() {
 	});
 
 	countries.sort(sortByName);
+
+	const navigate = useNavigate();
 
 	const isDisabled =
 		!formData.fname ||
@@ -232,6 +235,12 @@ function Form() {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(formData);
+		if (!isDisabled) {
+			alert('Form Submitted Successfully');
+		}
+		setTimeout(() => {
+			navigate('/submitted');
+		}, 3000);
 	};
 
 	useEffect(() => {
@@ -308,7 +317,7 @@ function Form() {
 								<svg
 									stroke='currentColor'
 									fill='currentColor'
-									stroke-width='0'
+									strokeWidth='0'
 									viewBox='0 0 1024 1024'
 									height='1.5em'
 									width='1.5em'
@@ -424,4 +433,4 @@ function Form() {
 	);
 }
 
-export default Form;
+export default FormComponent;
